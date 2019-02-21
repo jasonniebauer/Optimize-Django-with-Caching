@@ -1,11 +1,11 @@
-# Memcached for Django
+# Scaling Django with Memcached
 Caching tutorial for Django web apps.
 
 **Table of Contents**
 1. [Get Started](#get-started)
 2. [Install Memcached](#install-memcached)
 3. [Run Memcached](#run-memcached)
-4. [Configure Memcached for Django](#configure-memcached-for-django)
+4. [Configure Django](#configure-django)
 
 ## Get Started
 
@@ -47,7 +47,7 @@ memcached -d start
 memcached -d stop
 ```
 
-## Configure Memcached for Django
+## Configure Django
 
 **Install Package**
 ```
@@ -65,3 +65,7 @@ CACHES = {
 ```
 
 **views.py**
+
+---
+
+* [Reference 1](https://djangobook.com/djangos-cache-framework/)

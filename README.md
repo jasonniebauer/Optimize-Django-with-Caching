@@ -6,10 +6,12 @@ Caching tutorial for Django projects.
 2. [Install Memcached](#install-memcached)
 3. [Run Memcached](#run-memcached)
 4. [Configure Django](#configure-django)
+    * [Cache View by Route](#cache-view-by-route)
 
 ## Get Started
 
 ## Install Memcached
+Open Command Prompt, change to the memcached directory, and execute the install command.
 
 **Windows**
 ```
@@ -18,9 +20,11 @@ memcached.exe -d install
 
 ## Run Memcached
 
-`-d`
-`-m`
-`-v` verbose. (-v, -vv, -vvv)
+| Flag | Description |
+|:-----|:------------|
+| `-d` |             |
+| `-m` |             |
+| `-v` | verbose. (-v, -vv, -vvv) |
 
 **Memcached Help**
 ```
@@ -29,7 +33,7 @@ memcached -h
 
 **Start Memcached**
 ```
-memcached start
+memcached start -v
 ```
 
 **Stop Memcached**
@@ -65,6 +69,24 @@ CACHES = {
 ```
 
 **views.py**
+```
+
+```
+
+### Cache View by Route
+**urls.py**
+```
+from django.views.decorators.cache import cache_page
+...
+url(r'<route>', cache_page(60 * <minutes>)(<view>))
+```
+
+Example:
+```
+from django.views.decorators.cache import cache_page
+...
+url(r'^$', cache_page(60 * 1440)(views.index))
+```
 
 ---
 

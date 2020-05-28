@@ -90,6 +90,13 @@ url(r'^$', cache_page(60 * 1440)(views.index))
 
 ---
 
+**Resources**
+* [Fastest *local* cache backend possible for Django](https://www.peterbe.com/plog/fastest-local-cache-backend-django)
+* [Python Memcached Implementation for Django project](https://micropyramid.com/blog/python-memcached-implementation-for-django-project/)
+* [Installing Memcached on Windows](https://commaster.net/posts/installing-memcached-windows/)
+* [pylibmc 1.6.1](https://pypi.org/project/pylibmc/)
+
+**Additional Resources**
 * [Django docs](https://docs.djangoproject.com/en/2.0/topics/cache/)
 * [Django’s Cache Framework](https://djangobook.com/djangos-cache-framework/)
 * [Clearing specific cache in Django](https://stackoverflow.com/questions/8784400/clearing-specific-cache-in-django)
